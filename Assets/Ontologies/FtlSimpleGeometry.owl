@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#"
+     xml:base="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry"
+     xmlns:FtlSimpleGeometry="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_ObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_ObjectProperty"/>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#hasGeometricFeature -->
+
+    <owl:ObjectProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#hasGeometricFeature">
+        <rdfs:subPropertyOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_ObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#isGeometricFeatureOf"/>
+        <rdfs:domain rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature"/>
+        <rdfs:range rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#isGeometricFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#isGeometricFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject"/>
+        <rdfs:range rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_DataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_DataProperty"/>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_filename -->
+
+    <owl:DatatypeProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_filename">
+        <rdfs:subPropertyOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_DataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A file path to a local instance of the object</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_name -->
+
+    <owl:DatatypeProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_name">
+        <rdfs:subPropertyOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_DataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A name for the object</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_url -->
+
+    <owl:DatatypeProperty rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_url">
+        <rdfs:subPropertyOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject_DataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An URI to an example of this geometric object</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#DomainEntity -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#DomainEntity"/>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Deadended -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Deadended">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole"/>
+        <owl:disjointWith rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Thru"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Thru -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Thru">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Overhang -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Overhang">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Thinwall -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Thinwall">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricFeature">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject -->
+
+    <owl:Class rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject">
+        <rdfs:subClassOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#DomainEntity"/>
+        <rdfs:comment>This class is for geometric objects for manufacturing.  Geometric object features (significant to manufacturing) are subclasses of this.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#RightAngle_4Holes -->
+
+    <owl:NamedIndividual rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#RightAngle_4Holes">
+        <rdf:type rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GeometricObject"/>
+        <GeometricObject_filename>angle1.obj</GeometricObject_filename>
+        <GeometricObject_name>Right Angle with 4 thru-holes</GeometricObject_name>
+        <GeometricObject_url>http://www.steptools.com/support/stdev_docs/stpfiles/ap203/angle1.stp</GeometricObject_url>
+        <rdfs:comment>A right angle with four thru-holes</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#RightAngle_4Holes_Hole1 -->
+
+    <owl:NamedIndividual rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#RightAngle_4Holes_Hole1">
+        <rdf:type rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole_Thru"/>
+        <isGeometricFeatureOf rdf:resource="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#RightAngle_4Holes"/>
+        <GeometricObject_filename>angle1_hole1.obj</GeometricObject_filename>
+        <GeometricObject_name>RightAngle_4Holes_Hole1</GeometricObject_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Hole"/>
+            <rdf:Description rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Overhang"/>
+            <rdf:Description rdf:about="http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#GF_Thinwall"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

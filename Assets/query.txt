@@ -1,0 +1,6 @@
+PREFIX ftl: <http://edesign.ecs.umass.edu/ontologies/2016/10/FtlSimpleGeometry#>
+SELECT ?entity ?fn
+WHERE {
+    ?entity a ftl:GeometricObject .
+	?entity ftl:GeometricObject_filename ?fn
+}
